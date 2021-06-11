@@ -1,0 +1,87 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-8 mt-n" >
+                <img src="./assets/img/login/login.png"> 
+        </div>
+        <div class="col-3">
+            <div class="row mb-5 mt-3">
+                <button type="button" class="btn btn-link" routerLink="../" >
+                    <i class="fa fa-arrow-left"></i>Volver
+                </button>
+            </div>
+
+            <form [formGroup]="signInForm" (ngSubmit)="signIn()">
+            <div class="my-5  p-2">
+                <div class="mb-5">
+                    <h1>Iniciar Sesión</h1>
+                </div>
+                <div class="mb-5">
+                    <label class="form-label">Usuario</label>
+                    <input  type="email"
+                            class="form-control" 
+                            formControlName="email" 
+                            placeholder="name@example.com"
+                            [class.is-invalid]="emailControl.invalid && (emailControl.touched ||emailControl.dirty)"
+                            [class.is-valid]="emailControl.valid && (emailControl.touched ||emailControl.dirty)" >
+                    
+                    <div *ngIf="(emailControl.touched ||emailControl.dirty)">
+                        <span *ngIf="emailControl.hasError('required')"
+                            class="invalid-feedback">
+                            Este campo es requerido
+                        </span>
+                        <span *ngIf="emailControl.hasError('emailFormat')" 
+                              class="invalid-feedback">
+                              {{ emailControl.getError('emailFormat') }}
+                        </span>
+                       
+                    </div>
+
+                   
+                </div>
+                <div class="mb-5">
+                    <label class="form-label">Clave</label>
+                    <input type="password"                           
+                           class="form-control" 
+                           formControlName="password"
+                           [class.is-invalid]="passwordControl.invalid && (passwordControl.touched ||passwordControl.dirty)"
+                           [class.is-valid]="passwordControl.valid && (passwordControl.touched ||passwordControl.dirty)" >
+                    
+                    <div *ngIf="passwordControl.touched || passwordControl.dirty">
+                        
+                        <span *ngIf="passwordControl.hasError('required')" class="invalid-feedback">
+                             Este campo es requerido
+                        </span>
+
+                       <span *ngIf="passwordControl.hasError('maxlength')" class="invalid-feedback"> 
+                             Ingre como máximo  {{ passwordControl.getError('maxlength').requiredLength }}  caracteres
+                       </span>
+                       
+                    </div>
+
+                  
+                </div>
+                <div class="row justify-content-between pl-3 mb-5">
+                    <a href="">Olvidé clave</a>
+                    <a href="">Registrarme</a>
+                </div>
+    
+                <div class="mb-5">
+                    <button tye="submit" class="btn btn-primary w-100" >
+                        Ingresar
+                    </button>
+                </div>
+
+                
+            </div>
+            </form>
+            
+
+        </div>
+    </div>
+   
+</div>
+
+
+
+

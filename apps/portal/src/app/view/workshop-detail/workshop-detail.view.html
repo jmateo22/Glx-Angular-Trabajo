@@ -1,0 +1,75 @@
+<div class="container" *ngIf = "workshop; else spinnerTemplate" >
+
+       
+    <div class="row pl-1 my-4">
+        <button type="button" class="btn btn-link" routerLink="../" >
+            <i class="fa fa-arrow-left"></i>Volver
+        </button>
+    </div>
+
+
+  
+    <div class="row">
+        <div class="col-12 mb-3 w-100">
+            <img [src]="workshop.image | imgPath:'workshop-default.png'" width="100%" height="160px"/>
+        </div>
+        <div class="col-12 mb-3"> 
+            <h1>{{ workshop.name }}</h1>
+        </div>
+        <div class="col-8 mb-3">
+            <span class="subtext">{{ workshop.description }}</span>
+        </div>
+    </div>
+
+    
+    <div class="row my-3"> 
+        <div class="col-1 my-2">
+            <span class="icon-color"><glx-icon name="Person"></glx-icon></span>Instructor:
+        </div>
+        <div class="col-11 my-2">
+            <span class="desc">{{ workshop.teacher }}</span>
+        </div>
+        <div class="col-1 my-2">
+            <span class="icon-color"> <glx-icon name="Calendar">  </glx-icon ></span>  Día
+        </div> 
+        <div class="col-11 my-2">
+            <span class="desc">{{ workshop.date }} </span>
+        </div> 
+        <div class="col-1 my-2"> 
+            <span class="icon-color"><glx-icon name="Alarm"> </glx-icon> </span> Hora:
+        </div> 
+        <div class="col-11 my-2">
+            <span class="desc">{{ workshop.time }}</span>
+         </div>
+        
+    </div>
+
+    <div class="d-grid gap-2 d-md-block">
+       
+        <button type="button" class="btn btn-outline-primary m-1">
+                <i class="fa fa-download" aria-hidden="true"></i>Descargar temario
+        </button>
+
+        
+        
+        <button class="btn btn-primary m-1">
+            <i class="fa fa-check-circle"></i>Inscribirme
+        </button>
+        
+    </div>
+
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<ng-template #spinnerTemplate>
+
+    <div class="spinner-border text-primary spineer-fixed" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</ng-template>
+

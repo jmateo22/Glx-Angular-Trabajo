@@ -1,0 +1,26 @@
+h1 {
+    color: #343a40 !important;
+ }
+ 
+ .glxcard-image{
+    height: 30%;
+}
+
+.glxcard-name{
+    padding: 10px;
+    height: 30%; 
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+ .glxcard-body{
+    padding: 10px;
+    height: 20%;
+}
+
+ .glxcard-footer{
+    padding: 10px;
+    height: 10%;
+    margin-top: 20px;
+}
