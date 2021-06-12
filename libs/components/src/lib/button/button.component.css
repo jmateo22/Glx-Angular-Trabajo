@@ -1,3 +1,4 @@
-button {
-    pointer-events: none;
-  }
+:host {
+    cursor: pointer;
+ 
+}

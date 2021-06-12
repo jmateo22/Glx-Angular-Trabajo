@@ -1,4 +1,4 @@
 export class AuthCredentials{
-    email:string ;
-    password:string;
+    email: string ;
+    password: string;
 }

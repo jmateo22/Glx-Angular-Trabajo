@@ -247,6 +247,15 @@
       "teacher": "Julio Sandoval Campos",
       "image": "",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+    },
+    {
+      "id": 9,
+      "name": "Angular Http",
+      "date": "19/03/2020",
+      "time": "20hrs",
+      "teacher": "Julio Ortiz Campos",
+      "image": "./assets/img/angular.png",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
     }
   ],
   "users": [
@@ -257,7 +266,7 @@
     },
     {
       "email": "test@gmail.com",
-      "password": "$2a$10$OOUdq/69MmwakXJPuvea5u1/IgsIDznNb4O0F2T3TFLQDAcDHUDHO",
+      "password": "123456",
       "id": 2
     }
   ],

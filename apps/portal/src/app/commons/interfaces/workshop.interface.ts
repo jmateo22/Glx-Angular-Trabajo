@@ -5,5 +5,5 @@ export interface Workshop {
     time: string;
     teacher: string;
     image: string;
-    description:string;
+    description: string;
   }

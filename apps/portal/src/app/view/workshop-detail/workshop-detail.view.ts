@@ -11,14 +11,14 @@ export class WorkshopDetailView implements OnInit {
 
   workshop: Workshop;
 
-  constructor(private workshopHtpp:WorkshopHttpService,
-              private activateRoute:ActivatedRoute) { }
+  constructor(private workshopHtpp: WorkshopHttpService,
+              private activateRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    const id= +this.activateRoute.snapshot.paramMap.get('idTaller');
+    const id = +this.activateRoute.snapshot.paramMap.get('idTaller');
 
     this.workshopHtpp.getOne(id).subscribe(
-      workshop=>this.workshop=workshop,
+      workshop => this.workshop = workshop,
     );
   }
 

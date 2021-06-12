@@ -30,12 +30,9 @@ export class ConfigHttpInterceptor implements HttpInterceptor {
     const newRequest = request.clone(
       {url: `${environment.apiUrl}${request.url}`}
     );
-  
-    //return next.handle(newRequest);
     return next.handle(newRequest)
     .pipe(
       catchError((err: HttpErrorResponse) => {
-       
         let message: string;
 
         if (err.error?.code) {

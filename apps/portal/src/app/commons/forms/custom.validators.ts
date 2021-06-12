@@ -1,15 +1,12 @@
-import { FormControl, ValidationErrors, ValidatorFn } from "@angular/forms";
+import { FormControl, ValidationErrors } from '@angular/forms';
 
 
 export class CustomValidators{
-      
-      static emailFormat(control: FormControl): ValidationErrors {
+    static emailFormat(control: FormControl): ValidationErrors {
         const value = control.value || '';
-        const regexp = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/
-    
+        // tslint:disable-next-line:max-line-length
+        const regexp = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
         const isValid = regexp.test(value);
-    
-        return isValid ? null : { emailFormat: 'El email debe tener el formato user@domain.ext' }
+        return isValid ? null : { emailFormat: 'El email debe tener el formato user@domain.ext' };
       }
-
 }

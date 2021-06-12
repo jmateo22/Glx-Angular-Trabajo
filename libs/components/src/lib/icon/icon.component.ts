@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./icon.component.css']
 })
 export class IconComponent implements OnInit {
-  @Input()  name:string;
+  @Input()  name: string;
 
   constructor() { }
 

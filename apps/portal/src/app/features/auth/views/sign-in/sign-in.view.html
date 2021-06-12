@@ -6,9 +6,9 @@
         </div>
         <div class="col-3">
             <div class="row mb-5 mt-3">
-                <button type="button" class="btn btn-link" routerLink="../" >
-                    <i class="fa fa-arrow-left"></i>Volver
-                </button>
+                <glx-button tier="link" routerLink="../" >
+                    <glx-icon name="Arrow-left">  </glx-icon >Volver
+                </glx-button>
             </div>
 
             <form [formGroup]="signInForm" (ngSubmit)="signIn()">
@@ -54,7 +54,7 @@
                         </span>
 
                        <span *ngIf="passwordControl.hasError('maxlength')" class="invalid-feedback"> 
-                             Ingre como máximo  {{ passwordControl.getError('maxlength').requiredLength }}  caracteres
+                             Ingrese como máximo  {{ passwordControl.getError('maxlength').requiredLength }}  caracteres
                        </span>
                        
                     </div>

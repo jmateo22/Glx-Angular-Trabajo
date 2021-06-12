@@ -12,17 +12,5 @@ export class AppComponent {
 
   isLoading: boolean;
 
-  constructor(private route:Router){
-    this.watchRouteEvents();
-  }
-
-  watchRouteEvents(){
-    this.route.events.pipe(
-      filter( e => e instanceof NavigationStart || e instanceof NavigationEnd),
-      map(e => e instanceof NavigationStart)
-    )
-    .subscribe(
-      isLoading => this.isLoading = isLoading
-    );
-  }
+  constructor(){ }
 }

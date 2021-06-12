@@ -9,6 +9,5 @@ export class SessionHttpService {
 
   saveSession(token: string): void {
     localStorage.setItem('token', token);
-
-  } 
+  }
 }

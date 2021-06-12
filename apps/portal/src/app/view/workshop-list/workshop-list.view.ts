@@ -9,8 +9,8 @@ import { WorkshopHttpService } from '../../commons/services/workshop-http.servic
 })
 export class WorkshopListView implements OnInit {
 
-  workshops:Workshop[]=[];
-  constructor(private workshopHttp:WorkshopHttpService) { }
+  workshops: Workshop[] = [];
+  constructor(private workshopHttp: WorkshopHttpService) { }
 
   ngOnInit(): void {
 
@@ -18,7 +18,4 @@ export class WorkshopListView implements OnInit {
       workshops => this.workshops = workshops,
     );
   }
-
-  
-
 }

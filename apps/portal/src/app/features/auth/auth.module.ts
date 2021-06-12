@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { AuthRoutingModule } from './auth-routing.module';
 import { SignInView } from './views/sign-in/sign-in.view';
 import { ReactiveFormsModule } from '@angular/forms';
+import { GlxIconModule } from '@galaxy/components/icon';
+import { GlxButtonModule } from '@galaxy/components/button';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,9 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     AuthRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    GlxIconModule,
+    GlxButtonModule
   ]
 })
 export class AuthModule { }

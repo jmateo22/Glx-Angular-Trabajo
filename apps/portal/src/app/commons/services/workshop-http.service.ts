@@ -18,13 +18,13 @@ const statusCustomErrorsMessage: Map<number, string> = new Map([
 })
 export class WorkshopHttpService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  getAll():Observable<Workshop[]>{
+  getAll(): Observable<Workshop[]>{
     return this.http.get<Workshop[]>('/workshops');
   }
 
-  getOne(id:number):Observable<Workshop>{
+  getOne(id: number): Observable<Workshop>{
     return this.http.get<Workshop>(`/workshops/${id}`);
   }
 

@@ -8,7 +8,7 @@ import { CardComponent } from './card.component';
   declarations: [
     CardComponent
   ],
-  exports:[CardComponent],
+  exports: [CardComponent],
   imports: [
     CommonModule
   ]

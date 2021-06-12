@@ -8,8 +8,8 @@ import { ConfigHttpInterceptor } from './config-http.interceptor';
 @NgModule({
   providers: [
     { provide : HTTP_INTERCEPTORS,
-      useClass :ConfigHttpInterceptor,
-      multi :true}
+      useClass : ConfigHttpInterceptor,
+      multi : true}
   ]
 })
 export class AppInterceptorsModule { }

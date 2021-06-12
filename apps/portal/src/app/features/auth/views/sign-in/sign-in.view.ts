@@ -16,17 +16,17 @@ export class SignInView implements OnInit {
     return this.signInForm.get('password') as FormControl;
   }
 
-  get emailControl() : FormControl {
+  get emailControl(): FormControl {
     return this.signInForm.get('email') as FormControl;
   }
 
   constructor(private builder: FormBuilder,
-             private authHttp: AuthHttpService,
-             private session : SessionHttpService) {
+              private authHttp: AuthHttpService,
+              private session: SessionHttpService) {
     this.signInForm = this.builder.group({
-      email: [null, [Validators.required,CustomValidators.emailFormat]],
-      password: [null, [Validators.required,Validators.maxLength(10)]],
-   })
+      email: [null, [Validators.required, CustomValidators.emailFormat]],
+      password: [null, [Validators.required, Validators.maxLength(10)]],
+   });
   }
 
   ngOnInit(): void {
@@ -34,13 +34,8 @@ export class SignInView implements OnInit {
 
   signIn(): void {
     console.log(this.signInForm.value);
-  
-    if(this.signInForm.valid){
-      this.authHttp.signIn(this.signInForm.value).subscribe( 
-        token => this.session.saveSession(token.accessToken)
-        );
-    }
-   
-  }
-
+    if (this.signInForm.valid){
+      this.authHttp.signIn(this.signInForm.value).subscribe(
+        token => this.session.saveSession(token.accessToken) );
+    }}
 }

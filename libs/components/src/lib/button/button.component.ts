@@ -11,8 +11,6 @@ export class ButtonComponent implements OnInit {
 
   @Input() tier: Tier;
   @Input() size: Size;
-  
-
   sizeClass: string;
 
   constructor() { }

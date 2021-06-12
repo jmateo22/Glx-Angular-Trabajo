@@ -11,7 +11,7 @@ export class AuthHttpService {
 
   constructor(private http: HttpClient) { }
 
-  signIn(credentials:AuthCredentials):Observable<AuthToken>{
-    return this.http.post<AuthToken>('/signin',credentials);
+  signIn(credentials: AuthCredentials): Observable<AuthToken>{
+    return this.http.post<AuthToken>('/signin', credentials);
   }
 }

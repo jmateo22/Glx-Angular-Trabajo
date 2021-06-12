@@ -22,9 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     WorkshopListView,
     WorkshopDetailView,
-    ImgPathPipe
-    
-  ],
+    ImgPathPipe],
   imports: [
     BrowserModule,
     AppRoutingModule,
